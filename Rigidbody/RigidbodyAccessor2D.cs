@@ -68,8 +68,8 @@ namespace AgnosticPhysics.Rigidbody
 
         public RigidbodyConstraints Constraints
         {
-            get => RigidbodyAcessorExtensions.ToRigidbodyConstraints3D(_rigidbody2D.constraints);
-            set => _rigidbody2D.constraints = RigidbodyAcessorExtensions.ToRigidbodyContraints2D(value);
+            get => _rigidbody2D.constraints.FromRigidbodyConstraints2D();
+            set => _rigidbody2D.constraints = value.FromRigidbodyContraints3D();
         }
 
         public void AddForce(Vector3 force)

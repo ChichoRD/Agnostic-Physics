@@ -28,7 +28,7 @@ namespace AgnosticPhysics.Rigidbody
             rigidbody.AddForce(rigidbody.Mass * velocity / Time.fixedDeltaTime);
         }
 
-        public static RigidbodyConstraints FromRigidbodyConstraints2D(RigidbodyConstraints2D constraints)
+        public static RigidbodyConstraints FromRigidbodyConstraints2D(this RigidbodyConstraints2D constraints)
         {
             RigidbodyConstraints rigidbodyConstraints = RigidbodyConstraints.None;
 
@@ -46,7 +46,7 @@ namespace AgnosticPhysics.Rigidbody
             return rigidbodyConstraints;
         }
 
-        public static RigidbodyConstraints2D FromRigidbodyContraints3D(RigidbodyConstraints constraints)
+        public static RigidbodyConstraints2D FromRigidbodyContraints3D(this RigidbodyConstraints constraints)
         {
             RigidbodyConstraints2D rigidbodyConstraints = RigidbodyConstraints2D.None;
 
