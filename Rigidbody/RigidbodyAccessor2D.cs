@@ -4,8 +4,8 @@ namespace AgnosticPhysics.Rigidbody
 {
     public class RigidbodyAccessor2D : MonoBehaviour, IRigidbody
     {
-        private float _gravityScale;
-        [SerializeField] private Rigidbody2D _rigidbody2D;
+        [SerializeField]
+        private Rigidbody2D _rigidbody2D;
         public GameObject GameObject => gameObject;
 
         public float Mass
@@ -50,14 +50,10 @@ namespace AgnosticPhysics.Rigidbody
             set => _rigidbody2D.angularDrag = value;
         }
 
-        public bool UseGravity
+        public float GravityScale
         {
-            get => _rigidbody2D.gravityScale > Mathf.Epsilon;
-            set
-            {
-                _gravityScale = UseGravity ? _rigidbody2D.gravityScale : _gravityScale;
-                _rigidbody2D.gravityScale = value ? _gravityScale : 0.0f;
-            }
+            get => _rigidbody2D.gravityScale;
+            set => _rigidbody2D.gravityScale = value;
         }
 
         public bool IsKinematic
