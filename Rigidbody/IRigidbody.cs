@@ -13,7 +13,7 @@ namespace AgnosticPhysics.Rigidbody
         float IReadOnlyRigidbody.Drag => Drag;
         float IReadOnlyRigidbody.AngularDrag => AngularDrag;
 
-        bool IReadOnlyRigidbody.UseGravity => UseGravity;
+        float IReadOnlyRigidbody.GravityScale => GravityScale;
         bool IReadOnlyRigidbody.IsKinematic => IsKinematic;
         RigidbodyConstraints IReadOnlyRigidbody.Constraints => Constraints;
 
@@ -27,7 +27,7 @@ namespace AgnosticPhysics.Rigidbody
         new float Drag { get; set; }
         new float AngularDrag { get; set; }
 
-        new bool UseGravity { get; set; }
+        new float GravityScale { get; set; }
         new bool IsKinematic { get; set; }
         new RigidbodyConstraints Constraints { get; set; }
 

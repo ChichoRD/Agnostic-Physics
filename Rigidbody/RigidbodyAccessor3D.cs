@@ -50,10 +50,10 @@ namespace AgnosticPhysics.Rigidbody
             set => _rigidbody.angularDrag = value;
         }
 
-        public bool UseGravity
+        public float GravityScale
         {
-            get => _rigidbody.useGravity;
-            set => _rigidbody.useGravity = value;
+            get => _rigidbody.useGravity ? 1.0f : 0.0f;
+            set => _rigidbody.useGravity = value != 0.0f;
         }
 
         public bool IsKinematic

@@ -15,7 +15,7 @@ namespace AgnosticPhysics.Rigidbody
         float Drag { get; }
         float AngularDrag { get; }
 
-        bool UseGravity { get; }
+        float GravityScale { get; }
         bool IsKinematic { get; }
         RigidbodyConstraints Constraints { get; }
     }
